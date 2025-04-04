@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Snake Game</h1>
+        <div class="score-container">
+            <p>Puntuación: <span id="score">0</span></p>
+            <p>Máxima puntuación: <span id="high-score">0</span></p>
+            <p>Vidas: <span id="lives-counter">0</span> <span class="lives-icon">❤️</span></p>
+            <p>Experiencia: <span id="exp">0</span></p>
+        </div>
+        <canvas id="game-canvas" width="400" height="400"></canvas>
+        <div class="controls">
+            <button id="start-button">Iniciar Juego</button>
+            <button id="restart-button">Reiniciar</button>
+        </div>
+        <div class="instructions">
+            <h2>Instrucciones</h2>
+            <p>Usa las siguientes teclas para mover la serpiente:</p>
+            <p><strong>W</strong> - Arriba | <strong>S</strong> - Abajo | <strong>A</strong> - Izquierda | <strong>D</strong> - Derecha</p>
+            <p>También puedes usar las teclas de flecha: ↑ ↓ ← →</p>
+            <p>Recoge la comida para crecer y ganar puntos.</p>
+            
+            <div class="new-features">
+                <h3>Nuevas Mecánicas:</h3>
+                <p><span class="feature-icon">🔄</span> <strong>Teleportación:</strong> Al chocar con una pared, aparecerás en el lado opuesto.</p>
+                <p><span class="feature-icon">🐍</span> <strong>Sin colisión propia:</strong> Puedes atravesar tu propio cuerpo sin perder.</p>
+                <p><span class="feature-icon">💎</span> <strong>Enemigos temporales:</strong> Aparecen diamantes púrpura que duran 10 segundos. ¡Evítalos o perderás!</p>
+                <p><span class="feature-icon">❤️</span> <strong>Sistema de vidas:</strong> Cada 15 manzanas comidas ganas una vida extra.</p>
+                <p><span class="feature-icon">💔</span> <strong>Uso de vidas:</strong> Al usar una vida se descuentan 150 puntos.</p>
+                <p><span class="feature-icon">⚠️</span> <strong>Peligro creciente:</strong> Cada vez que uses una vida, ¡la cantidad de enemigos se duplica!</p>
+            </div>
+            
+            <p class="difficulty-note">La dificultad aumenta: cada 10 frutas que comas, la velocidad aumentará un 10%.</p>
+            <p><strong>Pausa:</strong> Presiona la tecla <em>espaciador</em> para pausar la serpiente.
+            Mientras esté pausada, no se moverá hasta que pulses una tecla de dirección.</p>
+        </div>
+    </div>
+    <script src="script copy.js"></script>
+</body>
+</html>
